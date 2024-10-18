@@ -11,6 +11,10 @@ const CourseList = () => {
     setCourses(typedCoursesData);
   }, []);
 
+  const getImageUrl = (title: string) => {
+    return `/public/${title}.webp`;
+  };
+
   return (
     <div className="container mt-4">
       <h1 className="mb-4">Available Courses</h1>
@@ -18,6 +22,11 @@ const CourseList = () => {
         {courses.map((course) => (
           <div key={course.id} className="col">
             <div className="card h-100">
+              <img
+                src={getImageUrl(course.title)}
+                className="card-img-top"
+                alt={course.title}
+              />
               <div className="card-body">
                 <h5 className="card-title">{course.title}</h5>
                 <p className="card-text">{course.description}</p>
