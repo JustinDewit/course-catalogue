@@ -1,7 +1,8 @@
 import "./App.css";
+import CourseList from "./components/CourseList";
 
 function App() {
-  return <h1>Hello World</h1>;
+  return <CourseList />;
 }
 
 export default App;
