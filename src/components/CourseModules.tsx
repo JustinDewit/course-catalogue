@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import coursesData from "../data/courses.json";
 import { Course } from "../types/types";
 
@@ -19,22 +19,28 @@ export const CourseModules = () => {
 
   return (
     <div className="container mt-4">
-      <h1>{course.title}</h1>
-      <p>{course.description}</p>
+      <h1>Course Title: {course.title}</h1>
+      <p>Course Description: {course.description}</p>
       {/* Map through the course modules */}
-      {course.modules.map((module, index) => (
-        <div key={index} className="card mb-3">
+      {course.modules.map((module, moduleIndex) => (
+        <div key={moduleIndex} className="card mb-3">
           <div className="card-body">
-            <h2 className="card-title">{module.title}</h2>
+            <h2 className="card-title">Module Title: {module.title}</h2>
             {/* Map through the lessons in each module */}
             {module.lessons.map((lesson, lessonIndex) => (
               <div key={lessonIndex} className="mb-2">
-                <h3>{lesson.title}</h3>
-                <p>{lesson.description}</p>
+                <h3>Lesson Title: {lesson.title}</h3>
+                <p>Lesson Description: {lesson.description}</p>
+                <Link
+                  to={`/course/${course.id}/module/${moduleIndex}/lesson/${lessonIndex}`}
+                  className="btn btn-primary"
+                >
+                  Open Lesson
+                </Link>
                 {/* Map through the topics in each lesson */}
                 <ul>
                   {lesson.topics.map((topic, topicIndex) => (
-                    <li key={topicIndex}>{topic}</li>
+                    <li key={topicIndex}>Lesson Topic: {topic}</li>
                   ))}
                 </ul>
               </div>
