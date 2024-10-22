@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import coursesData from "../data/courses.json";
 import { Course } from "../types/types";
 
-const CourseDetails = () => {
+export const CourseModules = () => {
   // Extract the 'id' parameter from the URL
   const { id } = useParams<{ id: string }>();
 
@@ -46,4 +46,4 @@ const CourseDetails = () => {
   );
 };
 
-export default CourseDetails;
+export default CourseModules;
