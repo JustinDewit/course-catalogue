@@ -15,7 +15,7 @@ const CourseList = () => {
 
   // Helper function to generate image URLs based on course title
   const getImageUrl = (title: string) => {
-    return `/public/${title}.webp`;
+    return `/${title}.webp`;
   };
 
   return (
