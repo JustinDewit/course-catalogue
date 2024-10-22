@@ -37,12 +37,6 @@ export const CourseModules = () => {
                 >
                   Open Lesson
                 </Link>
-                {/* Map through the topics in each lesson */}
-                <ul>
-                  {lesson.topics.map((topic, topicIndex) => (
-                    <li key={topicIndex}>Lesson Topic: {topic}</li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
