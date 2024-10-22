@@ -50,3 +50,10 @@ const CourseList = () => {
 };
 
 export default CourseList;
+
+// Important Bootstrap components used in this page:
+// Container: https://getbootstrap.com/docs/5.3/layout/containers/
+// Grid system (row, col): https://getbootstrap.com/docs/5.3/layout/grid/
+// Card: https://getbootstrap.com/docs/5.3/components/card/
+// Button: https://getbootstrap.com/docs/5.3/components/buttons/
+// Utility classes (py-4, mb-5, fw-bold, etc.): https://getbootstrap.com/docs/5.3/utilities/
