@@ -19,10 +19,10 @@ const CourseList = () => {
   };
 
   return (
-    <div className="container py-4">
-      <h1 className="mb-4">Available Courses</h1>
+    <div className="container py-4 text-center">
+      <h1 className="mb-5 display-2 fw-bold">Available Courses</h1>
       {/* Grid layout for course cards */}
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
         {courses.map((course) => (
           // Individual course card
           <div key={course.id} className="col">
