@@ -71,3 +71,11 @@ export const CourseModules = () => {
 };
 
 export default CourseModules;
+
+// Bootstrap component references:
+// Container: https://getbootstrap.com/docs/5.3/layout/containers/
+// Accordion: https://getbootstrap.com/docs/5.3/components/accordion/
+// List Group: https://getbootstrap.com/docs/5.3/components/list-group/
+// Buttons: https://getbootstrap.com/docs/5.3/components/buttons/
+// Alerts: https://getbootstrap.com/docs/5.3/components/alerts/
+// Utility classes (display, margin, padding, flex): https://getbootstrap.com/docs/5.3/utilities/
