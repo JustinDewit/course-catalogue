@@ -14,34 +14,58 @@ export const CourseModules = () => {
     | undefined;
 
   if (!course) {
-    return <div>Course not found</div>;
+    return <div className="alert alert-danger">Course not found</div>;
   }
 
   return (
-    <div className="container mt-4">
-      <h1>Course Title: {course.title}</h1>
-      <p>Course Description: {course.description}</p>
-      {/* Map through the course modules */}
-      {course.modules.map((module, moduleIndex) => (
-        <div key={moduleIndex} className="card mb-3">
-          <div className="card-body">
-            <h2 className="card-title">Module Title: {module.title}</h2>
-            {/* Map through the lessons in each module */}
-            {module.lessons.map((lesson, lessonIndex) => (
-              <div key={lessonIndex} className="mb-2">
-                <h3>Lesson Title: {lesson.title}</h3>
-                <p>Lesson Description: {lesson.description}</p>
-                <Link
-                  to={`/course/${course.id}/module/${moduleIndex}/lesson/${lessonIndex}`}
-                  className="btn btn-primary"
-                >
-                  Open Lesson
-                </Link>
+    <div className="container mt-5">
+      <h1 className="display-4 mb-4">{course.title}</h1>
+      <p className="lead mb-5">{course.description}</p>
+
+      <div className="accordion" id="courseModules">
+        {course.modules.map((module, moduleIndex) => (
+          <div key={moduleIndex} className="accordion-item">
+            <h2 className="accordion-header">
+              <button
+                className="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target={`#module${moduleIndex}`}
+                aria-expanded="true"
+                aria-controls={`module${moduleIndex}`}
+              >
+                {module.title}
+              </button>
+            </h2>
+            <div
+              id={`module${moduleIndex}`}
+              className="accordion-collapse collapse show"
+            >
+              <div className="accordion-body">
+                <ul className="list-group">
+                  {module.lessons.map((lesson, lessonIndex) => (
+                    <li
+                      key={lessonIndex}
+                      className="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <h5 className="mb-1">{lesson.title}</h5>
+                        <p className="mb-1 text-muted">{lesson.description}</p>
+                      </div>
+                      <Link
+                        to={`/course/${course.id}/module/${moduleIndex}/lesson/${lessonIndex}`}
+                        className="btn btn-primary btn-sm"
+                      >
+                        Open Lesson
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
