@@ -48,3 +48,10 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// Bootstrap components used:
+// Navbar: https://getbootstrap.com/docs/5.3/components/navbar/
+// Container: https://getbootstrap.com/docs/5.3/layout/containers/
+// Nav: https://getbootstrap.com/docs/5.3/components/navs-tabs/
+// Buttons: https://getbootstrap.com/docs/5.3/components/buttons/
+// Vertical rule (vr): https://getbootstrap.com/docs/5.3/helpers/vertical-rule/
