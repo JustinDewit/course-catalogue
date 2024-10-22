@@ -91,3 +91,9 @@ const CourseLessons = () => {
 };
 
 export default CourseLessons;
+
+// Key Bootstrap components used:
+// Grid system: https://getbootstrap.com/docs/5.3/layout/grid/
+// Breadcrumb: https://getbootstrap.com/docs/5.3/components/breadcrumb/
+// Card: https://getbootstrap.com/docs/5.3/components/card/
+// Typography: https://getbootstrap.com/docs/5.3/content/typography/
