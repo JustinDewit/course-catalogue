@@ -17,7 +17,7 @@ export const CourseModules = () => {
   }
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 gradient-background">
       <h1 className="display-4 mb-4">{course.title}</h1>
       <p className="lead mb-5">{course.description}</p>
 

@@ -6,14 +6,16 @@ import CourseLessons from "./components/CourseLessons";
 const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<CourseList />} />
-        <Route path="/course/:id" element={<CourseModules />} />
-        <Route
-          path="/course/:id/module/:moduleIndex/lesson/:lessonIndex"
-          element={<CourseLessons />}
-        />
-      </Routes>
+      <div className="gradient-background">
+        <Routes>
+          <Route path="/" element={<CourseList />} />
+          <Route path="/course/:id" element={<CourseModules />} />
+          <Route
+            path="/course/:id/module/:moduleIndex/lesson/:lessonIndex"
+            element={<CourseLessons />}
+          />
+        </Routes>
+      </div>
     </Router>
   );
 };

@@ -35,7 +35,7 @@ const CourseLessons = () => {
   }
 
   return (
-    <div className="container mt-5">
+    <div className="container py-5">
       <div className="row">
         <div className="col-lg-8 offset-lg-2">
           <nav aria-label="breadcrumb">

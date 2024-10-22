@@ -19,7 +19,7 @@ const CourseList = () => {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container py-4">
       <h1 className="mb-4">Available Courses</h1>
       {/* Grid layout for course cards */}
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
