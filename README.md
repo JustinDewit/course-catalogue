@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+# Course Catalogue
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Course Catalogue Screenshot](path/to/screenshot.png)
 
-Currently, two official plugins are available:
+Course Catalogue is a React-based web application built with TypeScript and Vite. It provides a platform for browsing and accessing various online courses.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Browse a list of available courses
+- View detailed information about each course
+- Access course modules and individual lessons
+- Responsive design using Bootstrap
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- React 18.3
+- TypeScript 5.5
+- Vite 5.4
+- React Router 6.27
+- Bootstrap 5.3
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Prerequisites
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Node.js (version 14 or higher)
+- npm (comes with Node.js)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Installation
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/your-username/course-catalogue.git
+   cd course-catalogue
+   ```
+
+2. Install dependencies:
+
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```
+   npm run dev
+   ```
+
+4. Open your browser and visit `http://localhost:5173` to view the application.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+- `npm run dev`: Runs the app in development mode
+- `npm run build`: Builds the app for production
+- `npm run lint`: Lints the project files
+- `npm run preview`: Previews the built app
+
+## Project Structure
+
+- `src/`: Contains the source code
+  - `components/`: React components
+  - `data/`: JSON data for courses
+  - `types/`: TypeScript type definitions
+- `public/`: Static assets
