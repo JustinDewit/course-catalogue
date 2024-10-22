@@ -1,6 +1,6 @@
 # Course Catalogue
 
-![Course Catalogue Screenshot](/public/course-catalogue-screenshot.png)
+![Course Catalogue Screenshot](./public/course-catalogue-screenshot.png)
 
 Course Catalogue is a React-based web application built with TypeScript and Vite. It provides a platform for browsing and accessing various online courses.
 
