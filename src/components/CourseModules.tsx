@@ -3,16 +3,15 @@ import coursesData from "../data/courses.json";
 import { Course } from "../types/types";
 
 export const CourseModules = () => {
-  // Extract the 'id' parameter from the URL
+  // Extract course ID from URL parameters
   const { id } = useParams<{ id: string }>();
 
-  // Find the course in the coursesData array that matches the given id
-  // Parse the id to an integer, defaulting to an empty string if id is undefined
-  // Assert the result as Course | undefined to satisfy TypeScript
+  // Find the course matching the ID
   const course = coursesData.find((c) => c.id === parseInt(id ?? "")) as
     | Course
     | undefined;
 
+  // Display error if course not found
   if (!course) {
     return <div className="alert alert-danger">Course not found</div>;
   }
@@ -22,6 +21,7 @@ export const CourseModules = () => {
       <h1 className="display-4 mb-4">{course.title}</h1>
       <p className="lead mb-5">{course.description}</p>
 
+      {/* Accordion structure for course modules */}
       <div className="accordion" id="courseModules">
         {course.modules.map((module, moduleIndex) => (
           <div key={moduleIndex} className="accordion-item">
@@ -42,6 +42,7 @@ export const CourseModules = () => {
               className="accordion-collapse collapse show"
             >
               <div className="accordion-body">
+                {/* List of lessons within each module */}
                 <ul className="list-group">
                   {module.lessons.map((lesson, lessonIndex) => (
                     <li
